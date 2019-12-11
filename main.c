@@ -2,25 +2,19 @@
 
 int main() {
 	float celsius;
-	int fahr, begin, end, step;
-
-	begin = 0;
-	end = 300;
-	step = 20;
+	int fahr;
 	
-	fahr = begin;
-	printf("FAHRENHEIT TO CELSIUS TABLE\n");
-	printf("┌────────────┬─────────┐\n");
-	printf("│ FAHRENHEIT │ CELSIUS │\n");
-	printf("├────────────┼─────────┤\n");
-	while (fahr <= end) {
+		printf("FAHRENHEIT TO CELSIUS TABLE\n");
+		printf("┌────────────┬─────────┐\n");
+		printf("│ FAHRENHEIT │ CELSIUS │\n");
+		printf("├────────────┼─────────┤\n");
+
+	for (fahr = 300; fahr >= 0; fahr = fahr - 20) { 
 		celsius = 5.0/9.0 * (fahr - 32.0);
 
-		printf("│ %3d        │%6.1f   │\n", fahr, celsius);
+		printf("│    %3d     │  %5.1f  │\n", fahr, celsius);
 		printf("├────────────┼─────────┤\n");
 		printf("│            │         │\n");
-
-		fahr = fahr + step;
 	}
 
 }
