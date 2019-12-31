@@ -6,7 +6,7 @@ int main() {
 	int ch, ch_count, new_line_toggle;
 	ch_count = 0;
 	new_line_toggle = OFF;	/* used to prevent printing multiple line breaks if there is more than one blank */
-	
+
 	printf("Value of EOF: %d\n", EOF);
 
 	while ((ch = getchar()) != EOF) {
