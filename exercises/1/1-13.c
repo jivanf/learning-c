@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAXWORDLEN 4
+#define MAXWORDLEN 10
 
 int main() {
 	int i, j, ch, word_count, word_length, most_word_occurrences;
@@ -17,11 +17,8 @@ int main() {
 
 				else {
 					++word_sizes[MAXWORDLEN];
+					word_length = 0;
 				}
-			}
-
-			if (ch == '\n') {
-				break;
 			}
 		}
 
@@ -44,7 +41,7 @@ int main() {
 
 
 	for (i = most_word_occurrences; i > 0; i--) {
-		printf("%3d │\t", i);
+		printf("%4d │\t", i);
 		for (j = 0; j <= MAXWORDLEN; j++) { 
 			if (word_sizes[j] >= i) {
 				printf("*   ");
@@ -57,7 +54,7 @@ int main() {
 		printf("\n");
 	}
 
-	printf("    └");
+	printf("     └");
 	for (i = 0; i <= MAXWORDLEN; i++) {
 		printf("────");
 	}
