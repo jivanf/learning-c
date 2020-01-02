@@ -6,11 +6,7 @@ int main() {
 	most_repeated_char = 0;
 
 	while ((ch = getchar()) != EOF) {
-		if (ch == ' ' || ch == '\t' || ch == '\n' || (!(ch > 32) && !(ch < 127))) {
-			continue;
-		}
-
-		else {
+		if (ch > 32 && ch < 127) {
 			++chars[ch - 33];
 		}
 
@@ -29,17 +25,17 @@ int main() {
 	}
 
 	for (i = 0; i < 93; i++) {
-		printf("%c |  ", i + 33);
+		printf("%c │  ", i + 33);
 		for (j = 0; j < chars[i]; j++) {
 			printf("*  ");
 		}
 		printf("\n");
 	}
 
-	printf("  +");
+	printf("  └");
 
 	for (i = 0; i < most_repeated_char; i++) {
-		printf("---");
+		printf("───");
 	}
 
 	printf("\n");
