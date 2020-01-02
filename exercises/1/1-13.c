@@ -41,7 +41,7 @@ int main() {
 
 
 	for (i = most_word_occurrences; i > 0; i--) {
-		printf("%4d │\t", i);
+		printf("%4d |\t", i);
 		for (j = 0; j <= MAXWORDLEN; j++) { 
 			if (word_sizes[j] >= i) {
 				printf("*   ");
@@ -54,9 +54,9 @@ int main() {
 		printf("\n");
 	}
 
-	printf("     └");
+	printf("     +");
 	for (i = 0; i <= MAXWORDLEN; i++) {
-		printf("────");
+		printf("----");
 	}
 
 	printf("\n");
